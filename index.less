@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    background: #00B4DB;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    height: 100%;
+    width: 100%;
+    font-family: 'kaiti','SimSun','Verdana';
+}
+
+.login_register{
+    width: 1100px;
+    height: 550px;
+    box-shadow: 0px 5px 10px black;
+    margin: 0 auto;
+    position: relative;
+    top: 200px;
+    display: flex;
+    .container_lr{
+        height: 550px;
+        width: 550px;
+        .container{
+            width: 50%;
+            height: 100%;
+            background-color: white;
+            form{
+                display: flex;
+                flex-direction: column;
+            }
+            h1{
+                text-align: center;
+                margin: 60px 0px;
+                margin-top: 100px;
+            }
+            input{
+                font: 900 25px '';
+                margin: 0 auto;
+                width: 250px;
+                padding: 10px 10px;
+                border: none;
+                outline: none;
+                border-bottom:#FF0080 solid 2px;
+            }
+            button{
+                margin: 0 auto;
+                margin-top: 40px;
+                height: 50px;
+                width: 100px;
+                border-radius: 20px;
+                border:none;
+                background-color: #40E0D0;
+                font: 600 25px '';
+            }
+            button:active{
+                transform: scale(0.9);
+            }
+            
+          }
+        .login{
+            position: absolute;
+            display: block;
+            z-index: 2;
+
+        }
+        .register{           
+            position: absolute;
+            z-index: 1;
+            left: 0px;
+            display: block;
+            h1{
+                margin-top: 40px;
+                margin-bottom: 20px;
+            }
+            .email{
+                width: 250px;
+            }
+            button{
+                margin-top: 15px;
+            }
+        }
+          
+    }
+    
+      
+
+.over{
+    position: relative;
+    left: 0px;
+    width: 550px;
+    height: 550px;
+    display: flex;
+    margin: 0 auto;
+    .social_over{
+        display: flex;
+        flex-direction: column;
+        background: url('./2.jpg');
+        background-position-x:-150px ;
+        background-size: cover;
+        h2{
+            margin-top: 140px;
+            text-align: center;
+            font-size: 40px;
+            cursor: pointer;
+        }
+        p{
+            text-align: center;
+            margin-top: 40px;
+            font-size: 40px;
+            cursor: pointer;
+        }
+        button{
+            width: 100px;
+            height: 50px;
+            border-radius: 30px;
+            border: none;
+            font: 800 25px '';
+            margin-left: 40%;
+            margin-top: 40px;
+            background: linear-gradient(to right, #74ebd5, #acb6e5);         }
+        button:active{
+            transform: scale(0.9);
+        }
+    }
+
+    .over_login{
+        height: 100%;
+        width: 100%;
+        display: block;
+        z-index: 1;
+    }
+    .over_register{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        display: block;
+        z-index: 2;
+    }
+}
+}
+@keyframes left {
+    0%{left:0px}
+    100%{left:50%}
+}
+@keyframes right{
+    0%{left:0px}
+    100%{left: -50%;}
+}
+.login_register.active .register{
+    animation: left 1s ease-in-out;
+    z-index: 3;
+    animation-fill-mode: forwards;
+}
+.login_register.active .login{
+    animation: left 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+.login_register.active .over_login{
+    z-index: 4;
+}
+.login_register.active .over{
+    animation: right 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes left_reverse {
+    0%{left:50%}
+    100%{left:0px}
+}
+@keyframes right_reverse{
+    0%{left: -50%;}
+    100%{left:0px}
+}
+.login_register.active_reverse .register{
+    z-index: 1;
+    animation: left_reverse 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+.login_register.active_reverse .over{
+    animation: right_reverse 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+.login_register.active_reverse .over_login{
+    z-index: 1;
+}
+.login_register.active_reverse .login{
+    animation: left_reverse 1s ease-in-out;
+    animation-fill-mode: forwards;
+    z-index: 2;
+}
+
+@keyframes show {
+    0%{left: -600px;}
+    100%{left: 9999px;}
+}
+#click_register,#click_login,#click_verify{
+    position: fixed;
+    top: 150px;
+    left: -600px;
+    z-index: 10;
+    white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
