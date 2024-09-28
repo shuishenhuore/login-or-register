@@ -25,3 +25,9 @@ login1.onclick = function(){
 verity.onclick = function(){
     click_verity.style.cssText = "animation:show 15s linear"
 };
+
+setInterval(function(){
+    let lists = document.querySelectorAll('.item');
+    let background = document.querySelector('.background');
+    background.prepend(lists[6])
+},5000)

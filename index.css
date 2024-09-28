@@ -5,14 +5,57 @@
 }
 html,
 body {
-  /* background: #00B4DB;
-  background: -webkit-linear-gradient(to top, #0083B0, #00B4DB);
-  background: linear-gradient(to top, #0083B0, #00B4DB); */
-  background: url('./body/9.jpg') no-repeat;
-  background-size: cover;
   height: 100%;
   width: 100%;
   font-family: 'kaiti', 'SimSun', 'Verdana';
+}
+.background {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+}
+.item {
+  height: 100%;
+  width: 100%;
+}
+.i1 {
+  background: url('body/1.jpg') no-repeat;
+  background-size: cover;
+}
+.i2 {
+  background: url('body/2.jpg') no-repeat;
+  background-size: cover;
+}
+.i3 {
+  background: url('body/3.jpg') no-repeat;
+  background-size: cover;
+}
+.i4 {
+  background: url('body/4.jpg') no-repeat;
+  background-size: cover;
+}
+.i5 {
+  background: url('body/5.jpg') no-repeat;
+  background-size: cover;
+}
+.i6 {
+  background: url('body/6.jpg') no-repeat;
+  background-size: cover;
+}
+.i7 {
+  background: url('body/7.jpg') no-repeat;
+  background-size: cover;
+}
+@keyframes animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.item:first-child {
+  animation: animation 2s linear;
 }
 .login_register {
   width: 1100px;
@@ -95,7 +138,7 @@ body {
 .login_register .over .social_over {
   display: flex;
   flex-direction: column;
-  background: url('2.jpg');
+  background: url('pic.jpg');
   background-position-x: -150px;
   background-size: cover;
 }
