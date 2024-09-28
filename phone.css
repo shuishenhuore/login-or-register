@@ -1,0 +1,11 @@
+@media(max-width:800px){
+    .login_register{
+        transform: scale(0.3);
+        top: 10%;
+    }
+}
+@media(min-height:1000px){
+    .login_register{
+        transform: scale(0.7);
+        }
+}
