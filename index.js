@@ -30,4 +30,4 @@ setInterval(function(){
     let lists = document.querySelectorAll('.item');
     let background = document.querySelector('.background');
     background.prepend(lists[6])
-},5000)
+},10000)
