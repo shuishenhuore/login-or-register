@@ -1,11 +1,28 @@
-@media(max-width:800px){
+@media(max-width:500px){
     .login_register{
         transform: scale(0.3);
         top: 10%;
     }
 }
-@media(min-height:1000px){
+
+@media (min-width: 700px) and (max-width: 900px) {
     .login_register{
-        transform: scale(0.7);
-        }
+        transform: scale(0.6);
+        top: 200px;
+    }
 }
+
+@media(min-width:900px)and (max-width:1000px){
+    .login_register{
+        transform: scale(0.8);
+        top: 450px;
+    }
+}
+
+@media(min-width:500px)and (max-width:600px){
+    .login_register{
+        transform: scale(0.4);
+        top: 100px;
+    }
+}
+

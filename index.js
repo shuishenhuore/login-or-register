@@ -17,17 +17,17 @@ const click_register = document.getElementById('click_register');
 const click_login = document.getElementById('click_login');
 const click_verity = document.getElementById('click_verify');
 register1.onclick= function(){
-    click_register.style.cssText = "animation:show 15s linear"
+    click_register.style.cssText = "animation:show 5s linear"
 };
 login1.onclick = function(){
-    click_login.style.cssText = "animation:show 15s linear"
+    click_login.style.cssText = "animation:show 5s linear"
 };
 verity.onclick = function(){
-    click_verity.style.cssText = "animation:show 15s linear"
+    click_verity.style.cssText = "animation:show 5s linear"
 };
 
 setInterval(function(){
     let lists = document.querySelectorAll('.item');
     let background = document.querySelector('.background');
-    background.prepend(lists[6])
-},10000)
+    background.appendChild(lists[0])
+},5000)
